@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config";
 
 function CustomerForm({
   customers,
@@ -84,7 +85,7 @@ function CustomerForm({
     if (!validate()) return;
 
     await axios.post(
-      "http://localhost:5000//api/customers",
+      `${API_BASE_URL}/customers`,
       formData
     );
 

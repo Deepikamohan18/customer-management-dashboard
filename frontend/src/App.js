@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import CustomerForm from "./components/CustomerForm";
 import CustomerTable from "./components/CustomerTable";
 import "./App.css";
+import API_BASE_URL from "./config";
 
 function App() {
   const [customers, setCustomers] = useState([]);
@@ -21,7 +22,7 @@ function App() {
   const fetchCustomers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/customers"
+        `${API_BASE_URL}/customers`
       );
       setCustomers(response.data);
     } catch (error) {
@@ -43,7 +44,7 @@ function App() {
 
   const handleDelete = async (id) => {
     await axios.delete(
-      `http://localhost:5000/api/customers/${id}`
+      `${API_BASE_URL}/customers/${id}`
     );
     fetchCustomers();
   };
