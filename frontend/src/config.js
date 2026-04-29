@@ -1,4 +1,5 @@
+// frontend/src/config.js
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "https://customer-management-dashboard-j8xi.vercel.app/" || "http://localhost:5000";
+  process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 export default API_BASE_URL;
