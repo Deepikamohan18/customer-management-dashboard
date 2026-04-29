@@ -75,17 +75,17 @@ Build a basic full-stack web application that allows users to:
 
 ### Add Customer
 ```http
-POST /customers
+POST /api/customers
 ```
 
 ### Get All Customers
 ```http
-GET /customers
+GET /api/customers
 ```
 
 ### Delete Customer
 ```http
-DELETE /customers/:id
+DELETE /api/customers/:id
 ```
 
 ---
@@ -159,11 +159,11 @@ In-Memory Array Storage
 ### Flow Steps
 1. User enters Name, Email, Phone
 2. Clicks Submit
-3. React sends `POST /customers`
+3. React sends `POST /api/customers`
 4. Backend stores data in array
-5. React fetches updated list using `GET /customers`
+5. React fetches updated list using `GET /api/customers`
 6. Table re-renders
-7. Delete sends `DELETE /customers/:id`
+7. Delete sends `DELETE /api/customers/:id`
 8. Table refreshes automatically
 
 ---

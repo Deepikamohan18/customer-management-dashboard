@@ -21,7 +21,7 @@ function App() {
   const fetchCustomers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/customers"
+        "http://localhost:5000/api/customers"
       );
       setCustomers(response.data);
     } catch (error) {
@@ -43,7 +43,7 @@ function App() {
 
   const handleDelete = async (id) => {
     await axios.delete(
-      `http://localhost:5000/customers/${id}`
+      `http://localhost:5000/api/customers/${id}`
     );
     fetchCustomers();
   };

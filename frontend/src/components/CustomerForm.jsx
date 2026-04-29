@@ -84,7 +84,7 @@ function CustomerForm({
     if (!validate()) return;
 
     await axios.post(
-      "http://localhost:5000/customers",
+      "http://localhost:5000//api/customers",
       formData
     );
 
