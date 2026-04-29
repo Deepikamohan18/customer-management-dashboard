@@ -111,10 +111,10 @@ customer-management-dashboard/
 │   ├── api/
 |   |     |__ index.js
 │   └── package.json
-|   |
-|   |__ vercel.json
+|  
 │
 └── README.md
+|__ vercel.json
 ```
 
 ---
