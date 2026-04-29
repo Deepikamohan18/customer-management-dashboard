@@ -3,7 +3,6 @@ const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
 
 const app = express();
-const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -12,7 +11,6 @@ let customers = [];
 
 /*
  POST /customers
- Add customer with duplicate validation
 */
 app.post("/customers", (req, res) => {
   const { name, email, phone } = req.body;
@@ -71,6 +69,5 @@ app.delete("/customers/:id", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// FOR VERCEL
+module.exports = app;
