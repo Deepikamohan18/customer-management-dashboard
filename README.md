@@ -108,8 +108,11 @@ customer-management-dashboard/
 │   └── package.json
 │
 ├── backend/
-│   ├── server.js
+│   ├── api/
+|   |     |__ index.js
 │   └── package.json
+|   |
+|   |__ vercel.json
 │
 └── README.md
 ```
